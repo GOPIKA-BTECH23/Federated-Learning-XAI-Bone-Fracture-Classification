@@ -174,7 +174,7 @@ To ensure model transparency and clinical interpretability, multiple Explainable
 
 The loss curve demonstrates stable convergence of the optimized DenseNet121 model.
 
-![Loss Curve](https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/loss_curve.png?raw=true)
+![Loss Curve](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/loss_curve.png?raw=true)
 
 
 ---
@@ -183,7 +183,7 @@ The loss curve demonstrates stable convergence of the optimized DenseNet121 mode
 
 Grad-CAM++ highlights discriminative regions contributing to fracture classification decisions.
 
-![GradCAM](https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/gradcam_comparison.png?raw=true)
+![GradCAM](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/gradcam_comparison.png?raw=true)
 
 ---
 
@@ -191,7 +191,7 @@ Grad-CAM++ highlights discriminative regions contributing to fracture classifica
 
 Guided Backpropagation provides fine-grained pixel-level gradient explanations.
 
-![Guided Backprop](https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/guided_backprop.png?raw=true)
+![Guided Backprop](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/guided_backprop.png?raw=true)
 
 ---
 
@@ -199,7 +199,7 @@ Guided Backpropagation provides fine-grained pixel-level gradient explanations.
 
 Occlusion Sensitivity evaluates prediction robustness by masking image regions.
 
-![Occlusion](https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/occlusion_map.png?raw=true)
+![Occlusion](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/occlusion_map.png?raw=true)
 
 ---
 
