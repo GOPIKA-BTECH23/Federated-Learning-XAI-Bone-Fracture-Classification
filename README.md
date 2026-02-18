@@ -183,7 +183,7 @@ The loss curve demonstrates stable convergence of the optimized DenseNet121 mode
 
 Grad-CAM++ highlights discriminative regions contributing to fracture classification decisions.
 
-![GradCAM](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/gradcam_comparison.png?raw=true)
+![GradCAM](https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/images/gradcam_comparison.png?raw=true)
 
 ---
 
