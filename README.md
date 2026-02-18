@@ -1,6 +1,9 @@
 # Federated-Learning-XAI-Bone-Fracture-Classification
 Privacy-preserving Federated Learning framework for Bone Fracture Classification using DenseNet121, enhanced with Explainable AI (Grad-CAM++, Guided Backpropagation, Occlusion Sensitivity) for model interpretability, bias diagnosis, and clinically trustworthy predictions.
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/srushtidayanand/XAIforFL_medical_Diagnostics/blob/main/FL_dense121_dns.ipynb)
+
+
 # 🩻 Federated Learning with Explainable AI (XAI) for Bone Fracture Classification
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
