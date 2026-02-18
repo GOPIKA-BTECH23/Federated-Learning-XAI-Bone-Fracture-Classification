@@ -151,6 +151,24 @@ Measures prediction sensitivity to masked regions
 | Federated Independent (Optimized) | 93.48 |
 | **Federated Dependent (Optimized)** | **🏆 95.00** |
 
+## 📉 Training Loss Curve
+![Loss Curve](images/loss_curve.png)
+
+---
+
+## 🔥 Grad-CAM++ Visualization
+![GradCAM](images/gradcam_comparison.png)
+
+---
+
+## 🧠 Guided Backpropagation
+![Guided Backprop](images/guided_backprop.png)
+
+---
+
+## 🧩 Occlusion Sensitivity Mapping
+![Occlusion](images/occlusion_map.png)
+
 ---
 
 ✅ **Key Finding:**  
