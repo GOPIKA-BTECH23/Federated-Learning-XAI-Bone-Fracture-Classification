@@ -7,21 +7,6 @@ Privacy-preserving Federated Learning framework for Bone Fracture Classification
 
 ---
 
-# 📄 Research Paper
-
-**Title:**  
-*XAI for FL: Diagnosing Bias in Federated Medical Diagnostics*
-
-**Authors:**  
-Srushti Dayanand Dangi, Gopika R, Chaitanya AS, Ashwini Kodipalli, Gauravi Suryavamshi
-
-📥 **Download Paper:**  
-[Read Full Paper](research_paper.pdf)
-
----
-
-
-
 # 🩻 Federated Learning with Explainable AI (XAI) for Bone Fracture Classification
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
@@ -30,6 +15,10 @@ Srushti Dayanand Dangi, Gopika R, Chaitanya AS, Ashwini Kodipalli, Gauravi Surya
 ![Explainable AI](https://img.shields.io/badge/AI-Explainable-purple)
 ![Status](https://img.shields.io/badge/Project-Academic-brightgreen)
 
+---
+## 📄 Associated Publication
+📘 *XAI for FL: Diagnosing Bias in Federated Medical Diagnostics*  
+📥 [View Research Paper](research_paper.pdf)
 ---
 
 ## 🩻 Project Overview
