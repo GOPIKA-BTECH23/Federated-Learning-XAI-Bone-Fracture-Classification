@@ -6,52 +6,47 @@ Privacy-preserving Federated Learning framework for Bone Fracture Classification
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-DeepLearning-orange)
 ![Federated Learning](https://img.shields.io/badge/Paradigm-FederatedLearning-success)
-![XAI](https://img.shields.io/badge/AI-ExplainableAI-purple)
+![Explainable AI](https://img.shields.io/badge/AI-Explainable-purple)
 ![Status](https://img.shields.io/badge/Project-Academic-brightgreen)
 
 ---
 
-## 📌 Project Overview
+## 🩻 Project Overview
 
-This project presents a **privacy-preserving Federated Learning (FL) framework** for **bone fracture detection using X-ray images**, enhanced with **Explainable AI (XAI)** techniques to improve interpretability and clinical trust.
+This project implements a **privacy-preserving Federated Learning (FL) framework** for **bone fracture classification using X-ray images**, enhanced with **Explainable AI (XAI)** techniques to improve model transparency and clinical trust.
 
 A **DenseNet121 deep learning model** was trained under:
 
 ✔ Centralized (baseline) setup  
-✔ Federated Learning setup across **3 simulated hospital clients**
+✔ Federated Learning setup across **three simulated hospital clients**
 
-To ensure transparency and reliability, the system integrates:
+To ensure interpretability, multiple XAI techniques were integrated:
 
 - 🔥 Grad-CAM++
 - 🧠 Guided Backpropagation
 - 🧩 Occlusion Sensitivity Mapping
 
-These XAI techniques visually explain model decisions by highlighting clinically relevant fracture regions.
+These methods visually highlight image regions influencing the model’s predictions, validating that decisions are based on clinically relevant fracture features.
 
 ---
 
 ## 🎯 Objectives
 
-- Develop a **Federated Learning system** for medical image classification
-- Compare **centralized vs federated performance**
-- Improve baseline DenseNet121 using **custom architectural enhancements**
-- Apply **Explainable AI (XAI)** for interpretability
-- Analyze **Dependent vs Independent Federated Learning**
+- Develop a **Federated Learning-based medical imaging classifier**
+- Compare **centralized vs federated training performance**
+- Improve DenseNet121 accuracy via **architectural enhancements**
+- Integrate **Explainable AI (XAI)** for interpretability
+- Analyze **Dependent vs Independent Federated Learning strategies**
 
 ---
 
-## 🩻 Dataset Details
+## ⚙️ Methodology
 
-**Task:** Binary Bone Fracture Classification  
+### 1️⃣ Dataset
+
+**Dataset:** Bone Fracture Binary Classification  
 **Classes:** Fracture / Non-Fracture  
-
-**Total Images:** 10,580 X-ray images  
-
-| Split | Samples |
-|------|---------|
-| Training | 9,246 |
-| Validation | 828 |
-| Testing | 506 |
+**Splits:** Train / Validation / Test  
 
 **Federated Distribution (Simulated Hospitals):**
 
@@ -61,135 +56,131 @@ These XAI techniques visually explain model decisions by highlighting clinically
 | Client 2 | 4,674 | 50.55% |
 | Client 3 | 1,511 | 16.34% |
 
-✔ Non-IID distribution simulated  
-✔ Images resized to **224×224**  
-✔ Normalization + Data Augmentation applied
+✔ Non-IID data distribution simulated  
+✔ Images resized to **224 × 224**  
+✔ Normalization + Data Augmentation applied  
 
 ---
 
-## 🧠 Model Architectures
+### 2️⃣ Model Architectures
 
-### ✅ Baseline DenseNet121
+#### ✅ A. Baseline DenseNet121
 
 - ImageNet pretrained
 - GlobalAveragePooling
-- Dense (512, ReLU)
-- Dropout (0.4)
+- Dense(128, ReLU)
 - Sigmoid Output
 
 **Baseline Accuracy:** **88.49%**
 
 ---
 
-### 🚀 Optimized DenseNet121 + Custom Layers
+#### 🚀 B. Optimized DenseNet121 + Custom Layers
 
 Enhancements:
 
-✔ Additional Dense Layers (256 → 128)  
+✔ Multi-layer Dense Blocks  
 ✔ Batch Normalization  
-✔ Dropout (0.3–0.4)  
+✔ Dropout Regularization  
 ✔ Residual Skip Connections  
 ✔ Swish + ReLU Activations  
+✔ Fine-tuning of final layers  
 
 **Optimized Accuracy:** **94%**
 
 ---
 
-## 🌐 Federated Learning Setup
+### 3️⃣ Federated Learning Setup
 
 | Parameter | Value |
 |----------|-------|
 | Clients | 3 |
 | Federated Rounds | 3 |
-| Local Epochs | 2 |
-| Batch Size | 32 |
+| Local Epochs per Round | 2 |
+| Aggregation | **Weighted FedAvg** |
 | Optimizer | Adam |
 | Learning Rate | 1e-4 |
-| Aggregation | **FedAvg (Weighted)** |
 
 ---
 
-## 🔁 Federated Training Strategies
+### 4️⃣ Federated Training Strategies
 
-### 🔹 Independent Federated Learning
+#### 🔹 Independent Federated Learning
+
 - Random initialization
-- Clients train from scratch
+- Clients train without baseline knowledge
 
 **Accuracy:** **93.48%**
 
 ---
 
-### 🔹 Dependent Federated Learning
-- Initialized with optimized baseline weights
+#### 🔹 Dependent Federated Learning
+
+- Global model initialized with optimized baseline weights
 
 **Accuracy:** **🏆 95% (Best Performance)**
 
 ---
 
-## 🔍 Explainable AI (XAI) Integration
+### 5️⃣ Explainable AI (XAI) Integration
 
-To improve **clinical interpretability and trust**:
+To ensure **interpretability and clinical reliability**:
 
-### 🔥 Grad-CAM++
+#### 🔥 Grad-CAM++
 Highlights discriminative fracture regions
 
-### 🧠 Guided Backpropagation
-Pixel-level gradient visualization
+#### 🧠 Guided Backpropagation
+Visualizes pixel-level gradient influence
 
-### 🧩 Occlusion Sensitivity
+#### 🧩 Occlusion Sensitivity
 Measures prediction sensitivity to masked regions
 
-✔ Confirms focus on fracture zones  
-✔ Detects spurious correlations  
-✔ Validates medical relevance
+✔ Validates focus on fracture zones  
+✔ Detects model bias  
+✔ Improves clinical trust  
 
 ---
 
 ## 📊 Results Summary
 
-| Model Configuration | Accuracy |
-|---------------------|----------|
-| Baseline DenseNet121 (Centralized) | 88.49% |
-| DenseNet121 (Federated) | 86.00% |
-| Optimized DenseNet121 (Centralized) | 94.00% |
-| Federated Independent (Optimized) | 93.48% |
-| **Federated Dependent (Optimized)** | **🏆 95.00%** |
+| Model Configuration | Accuracy (%) |
+|---------------------|-------------|
+| DenseNet121 Baseline (Centralized) | 88.49 |
+| DenseNet121 Federated | 86.00 |
+| DenseNet121 + Custom Layers (Centralized) | 94.00 |
+| Federated Independent (Optimized) | 93.48 |
+| **Federated Dependent (Optimized)** | **🏆 95.00** |
 
 ---
 
-## 📉 Training Stability
-
-The optimized federated model demonstrated:
-
-✔ Stable convergence  
-✔ Reduced training/validation loss  
-✔ Improved generalization  
-
----
-
-## 🧰 Technologies & Tools
-
-- TensorFlow / Keras
-- TensorFlow Federated (TFF)
-- NumPy
-- Matplotlib
-- PIL / OpenCV
-- Google Colab / Kaggle
+✅ **Key Finding:**  
+Dependent Federated Learning with optimized initialization achieved the **highest accuracy (95%)**, demonstrating superior convergence and knowledge aggregation.
 
 ---
 
 ## 💡 Key Contributions
 
-✅ Federated Learning framework for medical imaging  
-✅ Optimized DenseNet121 architecture  
-✅ Comparative FL strategies (Dependent vs Independent)  
+✅ Privacy-preserving Federated Learning framework  
+✅ Optimized DenseNet121 architecture (+6% improvement)  
+✅ Comparative study of FL strategies  
 ✅ Integration of Explainable AI (XAI)  
-✅ Bias detection & interpretability validation  
-✅ Reproducible deep learning pipeline  
+✅ Bias diagnosis & interpretability validation  
+✅ Reproducible end-to-end pipeline  
 
 ---
 
-## 🚀 Future Enhancements
+## 🧰 Technologies Used
+
+- TensorFlow / Keras
+- TensorFlow Federated (TFF)
+- NumPy
+- PIL / OpenCV
+- Matplotlib
+- Google Colab / Kaggle
+
+---
+
+## 📈 Future Enhancements
 
 - 🔐 Secure Aggregation
 - 🛡 Differential Privacy
@@ -203,16 +194,16 @@ The optimized federated model demonstrated:
 ## 👥 Team Members
 
 **Srushti Dayanand Dangi**  
-B.Tech (Hons), RV University  
+B.Tech (Hons), 3rd Year – RV University, Bangalore  
 
 **Chaitanya A S**  
-B.Tech (Hons), RV University  
+B.Tech (Hons), 3rd Year – RV University, Bangalore  
 
 **Gauravik S S**  
-B.Tech (Hons), RV University  
+B.Tech (Hons), 3rd Year – RV University, Bangalore  
 
 **Gopika**  
-B.Tech (Hons), RV University  
+B.Tech (Hons), 3rd Year – RV University, Bangalore  
 
 ---
 
@@ -222,6 +213,7 @@ This repository is developed for **academic and educational purposes**.
 
 ---
 
-## ⭐ If you found this project interesting
+## ⭐ Support
 
-Give it a ⭐ on GitHub!
+If you found this project interesting, consider giving it a ⭐ on GitHub!
+
