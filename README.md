@@ -154,6 +154,46 @@ Measures prediction sensitivity to masked regions
 
 ---
 
+# 🔍 Explainable AI (XAI) Visualizations
+
+To ensure model transparency and clinical interpretability, multiple Explainable AI (XAI) techniques were applied to visualize regions influencing the model’s predictions.
+
+---
+
+## 📉 Training Loss Curve
+
+The loss curve demonstrates stable convergence of the optimized DenseNet121 model.
+
+![Loss Curve](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/loss_curve.png)
+
+---
+
+## 🔥 Grad-CAM++ Visualization
+
+Grad-CAM++ highlights discriminative regions contributing to fracture classification decisions.
+
+![GradCAM](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/gradcam_comparison.png)
+
+---
+
+## 🧠 Guided Backpropagation
+
+Guided Backpropagation provides fine-grained pixel-level gradient explanations.
+
+![Guided Backprop](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/guided_backprop.png)
+
+---
+
+## 🧩 Occlusion Sensitivity Mapping
+
+Occlusion Sensitivity evaluates prediction robustness by masking image regions.
+
+![Occlusion](images/https://github.com/GOPIKA-BTECH23/Federated-Learning-XAI-Bone-Fracture-Classification/blob/main/occlusion_map.png)
+
+---
+
+---
+
 ✅ **Key Finding:**  
 Dependent Federated Learning with optimized initialization achieved the **highest accuracy (95%)**, demonstrating superior convergence and knowledge aggregation.
 
